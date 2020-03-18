@@ -26,75 +26,122 @@
   </p>
   <p>Tryk på en af de to knapper nedenfor for at give udtryk for om du har brug for hjælp eller gerne vil hjælpe</p>
 
-
+  <hr>
   <p>
   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseNeedHelp" aria-expanded="false" aria-controls="collapseExample">
-    Jeg har brug for hjælp
+    Jeg har brug for hjælp >>
   </button>
   </p>
   <div>
     <div class="collapse" id="collapseNeedHelp">
       <div class="card card-body">
-        <form>
+        <form  action="/helpee" method="post">
 
           <div class="checkbox">
-            <label><input type="checkbox" value="">Jeg har brug for hjælp til at handle</label>
+            <label><input type="checkbox" value="shoppingHelpee" name="shoppingHelpee">Jeg har brug for hjælp til at handle</label>
           </div>
           <div class="checkbox">
-            <label><input type="checkbox" value="">Jeg vil gerne bedes for</label>
+            <label><input type="checkbox" value="prayerHelpee" name="prayerHelpee">Jeg vil gerne bedes for</label>
           </div>
-          <div class="checkbox disabled">
-            <label><input type="checkbox" value="" disabled>Jeg vil gerne have et telfonopkald</label>
+          <div class="checkbox ">
+            <label><input type="checkbox"  value="phoneHelpee" name="phoneHelpee" >Jeg vil gerne have et telfonopkald</label>
           </div>
-          <div class="checkbox disabled">
-            <label><input type="checkbox" value="" disabled>Andet (skriv det i feltet nedenfor )</label>
+          <div class="checkbox ">
+            <label><input type="checkbox" value="otherHelpee" name="otherHelpee" >Andet (skriv det i feltet nedenfor )</label>
           </div>
 
           <div class="form-group">
             <label for="name">Navn</label>
-            <input type="string" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Skriv dit navn">
-            <small id="emailHelp" class="form-text text-muted">Skriv dit navn</small>
+            <input type="string" class="form-control" id="name" name="name" aria-describedby="nameHelp" placeholder="Skriv dit navn">
+            <small id="nameHelp" class="form-text text-muted">Skriv dit navn</small>
           </div>
 
           <div class="form-group">
             <label for="exampleInputEmail1">Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Skriv din email">
+            <input type="email" class="form-control" id="email1" name="email" aria-describedby="emailHelp" placeholder="Skriv din email">
             <small id="emailHelp" class="form-text text-muted">Vi deler ikke din email med folk udenfor gava uden dit samtykke</small>
           </div>
           <div class="form-group">
             <label for="phoneNumber">Telefonnummer</label>
-            <input type="text" class="form-control" id="phoneNumber" aria-describedby="phoneHelp" placeholder="Skriv dit telefonnummer">
+            <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" aria-describedby="phoneHelp" placeholder="Skriv dit telefonnummer">
             <small id="emailHelp" class="form-text text-muted">Vi deler ikke dit telefonnummer med folk udenfor gava uden dit samtykke</small>
           </div>
+          <div class="form-group">
+            <label for="address">Adresse</label>
+            <input type="text" class="form-control" id="address" name="address" aria-describedby="addressHelp" placeholder="Skriv din adresse">
+            <small id="addressHelp" class="form-text text-muted">Vi deler ikke din adresse med folk udenfor gava uden dit samtykke</small>
+          </div>
+
 
           <div class="form-group">
 
             <label for="prayer">Hvordan kan vi bede for dig eller hjælpe dig</label>
-            <textarea class="form-control rounded-0" id="prayer" rows="5" aria-describedby="prayerHelp" ></textarea>
+            <textarea class="form-control rounded-0" id="prayer" name="prayer" rows="5" aria-describedby="prayerHelp" ></textarea>
             <small id="prayerHelp" class="form-text text-muted">Vi vil gerne bede for dig - intet er for småt intet er for stort!</small>
           </div>
 
           <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <input type="checkbox" class="form-check-input" id="contact" name="contact">
             <label class="form-check-label" for="exampleCheck1">Gava må gerne kontakte mig</label>
           </div>
-          <button type="submit" class="btn btn-primary">Indsend</button>
+          <button type="submit" class="btn btn-success">Indsend</button>
         </form>
       </div>
     </div>
   </div>
-  <p></p>
+  <hr>
   <div>
     <p>
     <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseHelper" aria-expanded="false" aria-controls="collapseExample">
-      Jeg vil gerne hjælpe
+      Jeg vil gerne hjælpe >>
     </button>
     </p>
     <div class="collapse" id="collapseHelper">
       <div class="card card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        <form  action="/helper" method="post">
+          <div class="checkbox">
+            <label><input type="checkbox" value="shoppingHelper" name="shoppingHelper">Jeg vil gerne hjælpe med at handle</label>
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox" value="prayerHelper" name="prayerHelper">Jeg vil gerne bede for folk</label>
+          </div>
+          <div class="checkbox ">
+            <label><input type="checkbox" value="phoneHelper" name="phoneHelper" >Jeg vil gerne give et telfonopkald</label>
+          </div>
+          <div class="form-group">
+            <label for="name">Navn</label>
+            <input type="string" class="form-control" id="name" name="name" aria-describedby="nameHelp" placeholder="Skriv dit navn">
+            <small id="nameHelp" class="form-text text-muted">Skriv dit navn</small>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Skriv din email">
+            <small id="emailHelp" class="form-text text-muted">Vi deler ikke din email med folk udenfor gava uden dit samtykke</small>
+          </div>
+          <div class="form-group">
+            <label for="phoneNumber">Telefonnummer</label>
+            <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" aria-describedby="phoneHelp" placeholder="Skriv dit telefonnummer">
+            <small id="emailHelp" class="form-text text-muted">Vi deler ikke dit telefonnummer med folk udenfor gava uden dit samtykke</small>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="contact" name="contact">
+            <label class="form-check-label" for="exampleCheck1">Gava må gerne kontakte mig</label>
+          </div>
+          <button type="submit" class="btn btn-success">Indsend</button>
+</form>
       </div>
     </div>
   </div>
 </div>
+<hr>
+<footer class="content-info">
+  <div class="container">
+    <section class="widget text-5 widget_text"><h3>GALTEN VALGMENIGHED</h3>			<div class="textwidget"><p>Hørslevvej 35, Skovby, 8464 Galten<br>
+Email: <a href="mailto:info@gava.dk">info@gava.dk</a><br>
+Kontakt præst Martin Eskesen på tlf: 21 86 24 86</p>
+</div>
+		</section>  </div>
+</footer>
 {% endblock %}
